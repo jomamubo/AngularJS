@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body ng-app="myApp" ng-controller="cocheController as vm">
+	<div>
+		Marca: <input type="text" ng-model="vm.coche.marca"><br>
+		Modelo: <input type="text" ng-model="vm.coche.modelo"><br>
+		<br>
+		El coche es: {{ vm.nombreCompletoDelCoche() }} disponible en:
+	</div>
+	<div>
+		<ul>
+			<li ng-repeat="conces in vm.concesionarios">
+				{{ conces.nombre + ' (' + conces.ciudad + ')' }}
+			</li>
+		</ul>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.24/angular.min.js"></script>
+<script src="./controladores/6_ejemploController.js"></script>
+</body>
+</html>

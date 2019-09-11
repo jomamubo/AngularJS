@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <link href="./css/stiloFiltros.css" rel="stylesheet">
+    <title>Insert title here</title>
+</head>
+
+<body>
+    <div ng-app="app" ng-controller="appCtrl as vm">
+        <h1>Pruebo Ajax</h1>
+        <section>
+            <form ng-submit="vm.enviar()">
+                Nombre: <input type="text" ng-model="vm.fdatos.nombre">
+                <br> Edad: <input type="text" ng-model="vm.fdatos.edad">
+                <br>
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.24/angular.min.js"></script>
+    <script src="./controladores/12_ejemploPOST_HTTP.js"></script>
+</body>
+
+</html>

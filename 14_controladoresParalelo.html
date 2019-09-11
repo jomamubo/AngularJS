@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body ng-app="app">
+	<nav>
+		<ul>
+			<li ng-class="{marcado: nav.estoy('/')}">
+				<a href="#/">Datos personales</a></li>
+			<li ng-class="{marcado: nav.estoy('/descargas')}">
+				<a href="#/descargas">Descargas</a></li>
+			<li ng-class="{marcado: nav.estoy('/opciones')}">
+				<a href="#/opciones">Opciones de cuenta</a></li>
+		</ul>
+	</nav>
+	<hr />
+	<div ng-view></div>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.24/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.24/angular-route.js"></script>
+	<script src="./controladores/14_controladoresParalelo.js"></script>
+</body>
+</html>

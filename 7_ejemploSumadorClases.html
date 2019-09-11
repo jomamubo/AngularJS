@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link href="./css/stiloSumador.css" rel="stylesheet">
+</head>
+<body>
+	<div ng-app="acumuladorApp" ng-controller="acumuladorAppCtrl as vm">
+		<h1 ng-class="vm.tamTitular">Acumulador</h1>
+		<select ng-model="vm.tamTitular">
+			<option value="titularpeq">Peque</option>
+			<option value="titulargran">Gran</option>
+		</select>
+		<h2 ng-class="vm.clases">Control de operación:</h2>
+		¿Cuánto? <input type="text" ng-model="vm.cuanto" size="4" placeholder="0" />
+		<br />
+		<input type="button" value="+" ng-click="vm.sumar()"/>
+		<input type="button" value="-" ng-click="vm.restar()"/>
+		<h2>Totales:</h2>
+		<p ng-class="{positivo: vm.total>=0, negativo: vm.total<0}">
+			En el acumulador llevamos <span>{{vm.total}}</span>
+		</p>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.24/angular.min.js"></script>
+<script src="./controladores/7_ejemploSumadorClases.js"></script>
+</body>
+</html>

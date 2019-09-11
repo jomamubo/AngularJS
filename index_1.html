@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+	Angular JS<br>
+	<div data-ng-app="" data-ng-init="quantity=7;cost=5;firstName='John';lastName='Doe'">
+		<p>Introduzca algo en el cuadro de texto:</p>
+		<p>Nombre: <input type="text" data-ng-model="name"></p>
+		<p data-ng-bind="name"></p>
+		<p>{{name}}</p>
+		<p>Nombre de variables {{ firstName + " " + lastName }}</p>
+		<p>Primera expresion: {{ 5 + 5 | number:2}}</p>		
+		<p>Total in dollar: {{ quantity * cost }}</p>
+		<p>Total in dollar: <span data-ng-bind="quantity * cost"></span></p>
+		<p ng-repeat="elemento in miColeccion" ng-init="paso=$index;">
+			Elemento con id {{paso}}: <span>{{elemento}}</span>
+		</p>
+	</div>
+<script src="./libAngular/angular.min.js"></script>
+</body>
+</html>

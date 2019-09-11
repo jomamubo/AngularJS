@@ -1,0 +1,19 @@
+<html>
+
+<body ng-app="app" ng-controller="appCtrl as vm">
+    <h1>Opciones</h1>
+	Tienes los siguientes colores: {{ vm.colores }}
+	<p>
+	Agrega Color <input type="text" ng-model="vm.nuevocolor"> 
+	<input type="button" value="ok" ng-click="vm.agregaColor(vm.nuevocolor)">
+	<br><br><br>
+	Tienes las siguientes descargas: {{ vm.descargas}}
+	<p>
+	Agrega Descarga <input type="text" ng-model="vm.newDescarga"> 
+	<input type="button" value="ok" ng-click="vm.nuevaDescarga(vm.newDescarga)">
+	
+	<script src="./libAngular//angular.min.js"></script>
+	<script src="./libAngular/angular-route.js"></script>
+	<script src="./controladores/opciones.js"></script>
+</body>
+</html>

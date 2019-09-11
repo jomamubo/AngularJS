@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<div ng-app="pruebaApp" ng-controller="pruebaAppCtrl">
+	{{ scopeNormal }}
+	<br />
+	{{ scopeRaiz }}
+	<br />
+	{{ algo }} --- {{ $parent.algo }}
+	</div>
+	
+	<script src="./libAngular/angular.min.js"></script>
+	<script src="./libAngular/angular-route.js"></script>
+	<script src="./controladores/16_ejemploParent.js"></script>
+</body>
+</html>
